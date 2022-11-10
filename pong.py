@@ -102,11 +102,13 @@ def desenhar():
 
 pygame.init()
 pygame.display.set_mode((LARGURA_JANELA, ALTURA_JANELA), DOUBLEBUF | OPENGL)
+pygame.display.set_caption("Pong com Y")
 
 running = True
+
 while running:
-    atualizar()
     desenhar()
+    atualizar()
     pygame.event.pump()
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
