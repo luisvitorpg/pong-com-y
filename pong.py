@@ -25,7 +25,7 @@ def larguraDosJogadores():
     return tamanhoDaBola
 
 def alturaDosJogadores():
-    return 3 * tamanhoDaBola
+    return 7 * tamanhoDaBola
 
 def atualizar():
     global xDaBola, yDaBola, velocidadeDaBolaEmX, velocidadeDaBolaEmY, yDoJogador1, yDoJogador2
@@ -36,7 +36,7 @@ def atualizar():
     if (xDaBola + tamanhoDaBola / 2 > xDoJogador2() - larguraDosJogadores() / 2
     and yDaBola - tamanhoDaBola / 2 < yDoJogador2 + alturaDosJogadores() / 2
     and yDaBola + tamanhoDaBola / 2 > yDoJogador2 - alturaDosJogadores() / 2):
-        audio = pygame.mixer.Sound("y.wav")
+        audio = pygame.mixer.Sound("receba.wav")
         pygame.mixer.Sound.play(audio)
         pygame.mixer.Sound.set_volume(audio, 0.2)
         pygame.mixer.music.stop()
@@ -45,7 +45,7 @@ def atualizar():
     if (xDaBola - tamanhoDaBola / 2 < xDoJogador1() + larguraDosJogadores() / 2
     and yDaBola - tamanhoDaBola / 2 < yDoJogador1 + alturaDosJogadores() / 2
     and yDaBola + tamanhoDaBola / 2 > yDoJogador1 - alturaDosJogadores() / 2):
-        audio = pygame.mixer.Sound("y.wav")
+        audio = pygame.mixer.Sound("toma.wav")
         pygame.mixer.Sound.play(audio)
         pygame.mixer.Sound.set_volume(audio, 0.2)
         pygame.mixer.music.stop()
